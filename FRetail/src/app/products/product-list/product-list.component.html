@@ -1,0 +1,9 @@
+<table class="table table-hover">
+<tr *ngFor="let pro of service.list" >
+<td (click)="populateForm(pro)" >{{pro.ProductName}}</td> 
+<td (click)="populateForm(pro)" >{{pro.PRate}}</td>
+<td (click)="populateForm(pro)" >{{pro.SRate}}</td>
+<td (click)="populateForm(pro)" >{{pro.InitStock}}</td>
+<td><button class="btn btn-sm btn-outline-danger" (click)="ondelete(pro.ProductId)">X</button> </td>
+</tr>
+</table>

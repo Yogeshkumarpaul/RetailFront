@@ -1,0 +1,37 @@
+<form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+    <input type="hidden" name="ProductId" #ProductId="ngModel" [(ngModel)] ="service.formdata.ProductId" class="form-control">
+    <div class="form-group">
+        <label > Product Name </label>   
+        <input name="ProductName" #ProductName="ngModel" [(ngModel)] ="service.formdata.ProductName" class="form-control" required >
+        <div class="validation-error" *ngIf="ProductName.invalid && ProductName.touched">This field is required</div>    
+    </div>
+
+    <div class="form-group">
+        <label > P Rate </label>   
+    <input name="PRate" #PRate="ngModel" [(ngModel)] ="service.formdata.PRate" class="form-control" >
+    </div>
+
+    <div class="form-group">
+        <label > Margin Per </label>   
+    <input name="MarginPer" #MarginPer="ngModel" [(ngModel)] ="service.formdata.MarginPer" class="form-control" >
+    </div>
+
+    <div class="form-group">
+        <label > Margin Amount </label>   
+    <input name="MarginAmount" #MarginAmount="ngModel" [(ngModel)] ="service.formdata.MarginAmount" class="form-control" >
+    </div>
+
+    <div class="form-group">
+        <label > S Rate </label>   
+        <input name="SRate" #SRate="ngModel" [(ngModel)] ="service.formdata.SRate" class="form-control" >
+    </div>
+
+    <div class="form-group">
+        <label > Init Stock </label>   
+        <input name="InitStock" #InitStock="ngModel" [(ngModel)] ="service.formdata.InitStock" class="form-control" >
+    </div>
+
+    <div class="form-group">
+        <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block">SUBMIT</button>
+    </div>
+</form>
