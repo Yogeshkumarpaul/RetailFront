@@ -4,11 +4,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { CompanyComponent } from './company/company.component';
 import { CustomerComponent } from './customer/customer.component';
 import { ProductsComponent } from './products/products.component';
+import { ProductComponent } from './products/product/product.component';
+import { ProductListComponent } from './products/product-list/product-list.component';
 
 const routes: Routes = [
   {path:"Company", component:CompanyComponent}, 
   {path:"Customer", component:CustomerComponent}, 
-  {path:"Product", component:ProductsComponent} 
+  {path:"Product", component:ProductComponent},
+  {path:"ProductList", component:ProductListComponent} 
 ];
 
 @NgModule({
@@ -16,4 +19,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const RoutingComponent = [CompanyComponent,CustomerComponent,ProductsComponent];
+export const RoutingComponent = [CompanyComponent,CustomerComponent,ProductComponent,ProductListComponent];

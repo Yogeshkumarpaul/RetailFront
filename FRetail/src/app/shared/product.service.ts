@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Product } from './product.model';
 import { HttpClient } from '@angular/common/http';
+import { ValueConverter } from '@angular/compiler/src/render3/view/template';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,7 @@ readonly rootUrl = "https://localhost:44368/api";
 constructor(private http: HttpClient) { }
 
   postProduct(formdata:Product){
+    formdata.ProductId =  Number(formdata.ProductId) 
   return  this.http.post(this.rootUrl+'/Products',formdata);
   }
 
