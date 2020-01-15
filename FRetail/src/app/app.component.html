@@ -1,5 +1,17 @@
 <div class="container">
-  <app-products>
+<div class="row">
+  <div class="col-md-2">  
+    <nav class="nav"> 
+      <a routerLink = "/Company">Company</a>   
+      <a routerLink = "/Customer">Customer </a> 
+      <a routerLink = "/Product">Productsd </a> 
+   </nav> 
+  </div>
+  <div class="col-md-10">
+    <router-outlet></router-outlet>
+  </div> 
 
-  </app-products>
+  <!-- <app-products>
+
+  </app-products> -->
 </div>

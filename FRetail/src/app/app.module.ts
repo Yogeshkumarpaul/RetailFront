@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, RoutingComponent } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductComponent } from './products/product/product.component';
@@ -13,6 +13,8 @@ import { ProductListComponent } from './products/product-list/product-list.compo
 import { ProductService } from './shared/product.service';
 import { HttpClientModule } from '@angular/common/http';
 import { Product } from './shared/product.model';
+import { CompanyComponent } from './company/company.component';
+import { CustomerComponent } from './customer/customer.component';
 
 
 @NgModule({
@@ -20,7 +22,10 @@ import { Product } from './shared/product.model';
     AppComponent,
     ProductsComponent,
     ProductComponent,
-    ProductListComponent
+    ProductListComponent,
+    CompanyComponent,
+    CustomerComponent,
+    RoutingComponent
   ],
 
   imports: [
