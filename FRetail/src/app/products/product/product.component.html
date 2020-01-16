@@ -1,4 +1,4 @@
-<form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+<form  #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
     <input type="hidden" name="ProductId" #ProductId="ngModel" [(ngModel)] ="service.formdata.ProductId" class="form-control">
     <div class="form-group">
         <label > Product Name </label>   
@@ -32,6 +32,13 @@
     </div>
 
     <div class="form-group">
-        <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block">SUBMIT</button>
+      <div class="row">
+        <div class="col-md-6">      
+            <button type="button" class="btn btn-lg btn-block" (click)="clearform(form)">Clear </button>
+        </div> 
+        <div class="col-md-6">      
+            <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block">SUBMIT</button>
+        </div>
+      </div>
     </div>
 </form>

@@ -11,6 +11,7 @@ const routes: Routes = [
   {path:"Company", component:CompanyComponent}, 
   {path:"Customer", component:CustomerComponent}, 
   {path:"Product", component:ProductComponent},
+  {path:"Products", component:ProductsComponent},
   {path:"ProductList", component:ProductListComponent} 
 ];
 
@@ -19,4 +20,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const RoutingComponent = [CompanyComponent,CustomerComponent,ProductComponent,ProductListComponent];
+export const RoutingComponent = [CompanyComponent,CustomerComponent,ProductComponent,ProductListComponent,ProductsComponent];
