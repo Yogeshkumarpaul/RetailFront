@@ -10,6 +10,7 @@ export class ProductService {
 formdata: Product;
 list: Product[];
 readonly rootUrl = "https://localhost:44368/api";
+//>readonly rootUrl = "http://localhost/RetailApi";
 
 constructor(private http: HttpClient) { }
 
