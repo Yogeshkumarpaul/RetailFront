@@ -18,6 +18,9 @@ import { CustomerComponent } from './customer/customer.component';
 
 import { fakeBackendProvider } from './helpers';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +38,9 @@ import { fakeBackendProvider } from './helpers';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    ReactiveFormsModule
+
   ],
   providers: [
     ProductService,
