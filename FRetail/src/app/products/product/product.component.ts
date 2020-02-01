@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/shared/product.service';
 import { NgForm } from '@angular/forms';
 import { ToastrService} from 'ngx-toastr';
+import { ValueConverter } from '@angular/compiler/src/render3/view/template';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -29,7 +30,11 @@ export class ProductComponent implements OnInit {
       MarginAmount: 0,
       SRate: 0,
       InitStock: 0,
-      MagUnitID: null 
+      MagUnitID: null, 
+      ColorId: null,
+      ManufacturerId: null,
+      SupplierID: null,
+      SizeId : null
     }
   }
   
@@ -61,5 +66,10 @@ export class ProductComponent implements OnInit {
   clearform(form: NgForm){
     form.reset();
   }
-
+  OnInput(event: any) {
+    this.service.formdata.MarginAmount = ((this.service.formdata.MarginPer) * (+this.service.formdata.PRate))/100;
+    this.service.formdata.SRate =  (+this.service.formdata.MarginAmount) + (+this.service.formdata.PRate);
+  }
 }
+
+

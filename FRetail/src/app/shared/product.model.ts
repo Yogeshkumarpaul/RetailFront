@@ -8,4 +8,8 @@ export class Product {
      SRate: number;
      InitStock: number;
      MagUnitID: number;
+     ColorId: number;
+     ManufacturerId: number;
+     SupplierID: number;
+     SizeId : number;
 }

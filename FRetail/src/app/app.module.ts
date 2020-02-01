@@ -16,6 +16,7 @@ import { Product } from './shared/product.model';
 import { CompanyComponent } from './company/company.component';
 import { CustomerComponent } from './customer/customer.component';
 
+import { fakeBackendProvider } from './helpers';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,11 @@ import { CustomerComponent } from './customer/customer.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot()
   ],
-  providers: [ProductService],
+  providers: [
+    ProductService,
+    fakeBackendProvider
+  ],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
