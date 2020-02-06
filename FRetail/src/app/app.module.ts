@@ -20,6 +20,9 @@ import { fakeBackendProvider } from './helpers';
 
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { AgGridModule } from 'ag-grid-angular';
+import { SaleComponent } from './sale/sale.component';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +32,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProductListComponent,
     CompanyComponent,
     CustomerComponent,
-    RoutingComponent
+    RoutingComponent,
+    SaleComponent
+    
   ],
 
   imports: [
@@ -39,7 +44,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AgGridModule.withComponents([])
 
   ],
   providers: [
